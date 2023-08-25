@@ -1,19 +1,28 @@
 ---
-const { text, body = "/" } = Astro.props;
+const { text, body, billede, pris = "/" } = Astro.props;
 ---
 
 <div class="boks">
   <div class="flexboks">
     <div class="billede">
-      <img src="/billede1.jpg" alt="billede" />
+      <img src={billede} alt="" height="200" width="200" />
     </div>
     <div class="tekstboks">
-      <h1>{text}</h1>
+      <div class="overskrift">
+        <h1>{text}</h1>
+        <h1>{pris}</h1>
+      </div>
       <p>{body}</p>
     </div>
   </div>
   <div class="logo">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8l-8-8z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+      ><path
+        fill="green"
+        fill-rule="evenodd"
+        d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10Zm-5.97-3.03a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l1.47 1.47l2.235-2.236L14.97 8.97a.75.75 0 0 1 1.06 0Z"
+        clip-rule="evenodd"></path></svg
+    >
     <a href="button">view here</a>
   </div>
 </div>
@@ -34,25 +43,22 @@ const { text, body = "/" } = Astro.props;
     padding-inline-start: var(--size-3);
   }
 
+  .overskrift {
+    display: flex;
+    justify-content: space-between;
+  }
   h1 {
     padding-top: 0;
     font-family: var(--font-sans);
     font-size: var(--size-fluid-2);
 
-    color: var(--gray-9);
+    color: var(--gray-8);
   }
 
   p {
     font-family: var(--font-sans);
     color: var(--gray-7);
     max-inline-size: var(--size-content-3);
-  }
-
-  .billede {
-    height: var(--size-12);
-    width: var(--size-12);
-    background-color: #cbd5e1;
-    margin: var(--size-1);
   }
 
   .logo {

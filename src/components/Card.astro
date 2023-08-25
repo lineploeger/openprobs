@@ -1,11 +1,20 @@
 ---
 import Boks from "./Boks.astro";
-const { text, body, billede = "/" } = Astro.props;
+const { text, body, billede, pris = "/" } = Astro.props;
 ---
 
 <div class="card">
-  <Boks text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
+  <Boks billede="src/images/billede2.jpg" pris="€90.00" text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
+  <Boks billede="src/images/billede2.jpg" pris="€90.00" text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
   <Boks
+    billede="src/images/billede1.jpg"
+    pris="€70.00"
+    text="Nomad Shopping Tote"
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+  />
+  <Boks
+    billede="src/images/billede1.jpg"
+    pris="€70.00"
     text="Nomad Shopping Tote"
     body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
   />
@@ -13,6 +22,8 @@ const { text, body, billede = "/" } = Astro.props;
 
 <style>
   .card {
-    max-width: 1000px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
   }
 </style>
