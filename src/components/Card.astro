@@ -1,21 +1,23 @@
 ---
 import Boks from "./Boks.astro";
-const { text, body, billede, pris = "/" } = Astro.props;
+const { text, body, billede, pris, logotekst = "/" } = Astro.props;
 ---
 
 <div class="card">
-  <Boks billede="src/images/billede2.jpg" pris="€90.00" text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
-  <Boks billede="src/images/billede2.jpg" pris="€90.00" text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
+  <Boks billede="src/images/billede2.jpg" logotekst="Delivered" pris="€90.00" text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
+  <Boks billede="src/images/billede2.jpg" logotekst="Delivered" pris="€90.00" text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
   <Boks
     billede="src/images/billede1.jpg"
     pris="€70.00"
     text="Nomad Shopping Tote"
+    logotekst="Pending"
     body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
   />
   <Boks
     billede="src/images/billede1.jpg"
     pris="€70.00"
     text="Nomad Shopping Tote"
+    logotekst="Pending"
     body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
   />
 </div>
