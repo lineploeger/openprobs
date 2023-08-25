@@ -1,5 +1,6 @@
 ---
 import Boks from "../components/Boks.astro";
+import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
@@ -11,7 +12,12 @@ import Boks from "../components/Boks.astro";
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro...</h1>
-    <Boks />
+    <Card />
   </body>
 </html>
+
+<style>
+  body {
+    background-color: var(--gray-2);
+  }
+</style>

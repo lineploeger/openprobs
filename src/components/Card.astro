@@ -1,0 +1,18 @@
+---
+import Boks from "./Boks.astro";
+const { text, body, billede = "/" } = Astro.props;
+---
+
+<div class="card">
+  <Boks text="Micro Backpack" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore." />
+  <Boks
+    text="Nomad Shopping Tote"
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+  />
+</div>
+
+<style>
+  .card {
+    max-width: 1000px;
+  }
+</style>

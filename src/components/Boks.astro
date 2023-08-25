@@ -2,10 +2,68 @@
 const { text, body = "/" } = Astro.props;
 ---
 
-<div class="figure">
-  <img src="test-2.jpg" alt="billede" />
+<div class="boks">
+  <div class="flexboks">
+    <div class="billede">
+      <img src="/billede1.jpg" alt="billede" />
+    </div>
+    <div class="tekstboks">
+      <h1>{text}</h1>
+      <p>{body}</p>
+    </div>
+  </div>
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8l-8-8z"></path></svg>
+    <a href="button">view here</a>
+  </div>
 </div>
-<div class="tekstboks">
-  <h1>{text}</h1>
-  <p>{body}</p>
-</div>
+
+<style>
+  .flexboks {
+    display: flex;
+  }
+
+  .boks {
+    background-color: var(--gray-0);
+    border: var(--gray-3) solid;
+    margin: var(--size-00);
+    padding: var(--size-3);
+  }
+
+  .tekstboks {
+    padding-inline-start: var(--size-3);
+  }
+
+  h1 {
+    padding-top: 0;
+    font-family: var(--font-sans);
+    font-size: var(--size-fluid-2);
+
+    color: var(--gray-9);
+  }
+
+  p {
+    font-family: var(--font-sans);
+    color: var(--gray-7);
+    max-inline-size: var(--size-content-3);
+  }
+
+  .billede {
+    height: var(--size-12);
+    width: var(--size-12);
+    background-color: #cbd5e1;
+    margin: var(--size-1);
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--size-3);
+  }
+
+  a {
+    text-decoration: none;
+    font-family: var(--font-sans);
+    color: var(--blue-7);
+  }
+</style>
